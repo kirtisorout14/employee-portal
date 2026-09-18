@@ -1,0 +1,28 @@
+{
+  "name": "emp-portal-cap",
+  "version": "1.0.0",
+  "description": "Employee Management Portal - CAP backend (Phase 1 of the UI5/Fiori interview project)",
+  "main": "srv/employee-service.js",
+  "scripts": {
+    "start": "cds run",
+    "watch": "cds watch",
+    "deploy": "cds deploy --to sqlite:db.sqlite"
+  },
+  "dependencies": {
+    "@sap/cds": "^10.1.1"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^3.1.1",
+    "@sap/cds-dk": "^10.1.2"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": ":memory:"
+        }
+      }
+    }
+  }
+}
